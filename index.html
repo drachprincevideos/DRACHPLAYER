@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Video Player</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="video-container">
+        <video id="myVideo" preload="auto" oncontextmenu="return false;" controlsList="nodownload">
+            <source src="" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <button class="custom-play-btn" id="customPlayPauseButton"><i class="fas fa-play"></i></button>
+        <div class="controls">
+            <div class="play-btn" id="playPauseButton">
+                <i class="fas fa-play"></i>
+            </div>
+            <div class="progress-bar-container">
+                <div class="progress-bar">
+                    <div class="buffered" id="buffered"></div>
+                    <div class="progress" id="progress"></div>
+                    <div class="progress-thumb" id="progressThumb"></div>
+                </div>
+            </div>
+            <div class="volume-slider-container">
+                <div class="volume-control" id="volumeControl">
+                    <i class="fas fa-volume-up"></i>
+                </div>
+                <div class="volume-slider">
+                    <div class="volume-progress" id="volumeProgress"></div>
+                    <div class="volume-thumb" id="volumeThumb"></div>
+                </div>
+            </div>
+            <div class="fullscreen-btn" id="fullscreenButton">
+                <i class="fas fa-expand"></i>
+            </div>
+        </div>
+        <div id="loadingOverlay">
+            <div class="spinner"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
